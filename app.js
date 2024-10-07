@@ -24,22 +24,23 @@ console.log(`
 
 var choice = parseInt(readline.question(">>> "))
 
+// estrutura condicional
 if (choice === 1) {
 	console.clear()
 
-	console.log("Fazer uma reserva".cyan.bold)
+	console.log("Fazer uma reserva\n".cyan.bold)
   var name = readline.question("Digite seu nome: ")
   console.log(">>> ")
   
   console.clear()
 
-	console.log("Fazer uma reserva".cyan.bold)
+	console.log("Fazer uma reserva\n".cyan.bold)
   var date = readline.question("Digite a data da sua reserva: ")
   console.log(">>> ")
 
   console.clear()
 
-	console.log("Fazer uma reserva".cyan.bold)
+	console.log("Fazer uma reserva\n".cyan.bold)
   var room = readline.question("Digite o seu quarto: ")
   console.log(">>> ")
 
@@ -52,7 +53,7 @@ if (choice === 1) {
       room: room
     })
     .then((response) => {
-	    console.log("Fazer uma reserva".cyan.bold)
+	    console.log("Fazer uma reserva\n".cyan.bold)
       
       console.log(response.data.msg) 
       console.log()
@@ -76,6 +77,7 @@ if (choice === 2) {
         let q = response.data[0]
 
 	      console.clear()
+        
         console.log("Consultar uma reserva".cyan.bold)
         console.log(`>>> ID: ${q.id} | Nome: ${q.name} | Data: ${q.date} | Quarto: ${q.room}`)
       } else {
@@ -84,4 +86,3 @@ if (choice === 2) {
     }
   )
 }
-
